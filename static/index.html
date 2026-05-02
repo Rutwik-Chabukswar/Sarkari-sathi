@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SarkariSaathi - Government Scheme Assistant</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Google Fonts for a clean, professional look -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="logo">🏛️ SarkariSaathi</div>
+        <ul class="nav-links">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Schemes</a></li>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero">
+        <div class="hero-content">
+            <h1>Official Portal for Scheme Assistance</h1>
+            <p>Get instant, accurate information regarding the PM-Kisan Samman Nidhi Yojana directly from official documents.</p>
+            <button class="cta-button">Explore Schemes</button>
+        </div>
+        <div class="hero-image">
+            <img src="https://thumbs.dreamstime.com/b/vector-cartoon-illustration-cute-narendra-modi-isolated-white-background-cartoon-illustration-narendra-modi-136848816.jpg?w=768" alt="PM Modi Cartoon">
+        </div>
+    </header>
+
+    <!-- Information Cards -->
+    <section class="cards-container">
+        <div class="card">
+            <h3>Income Support</h3>
+            <p>₹6,000 per year transferred directly to bank accounts.</p>
+        </div>
+        <div class="card">
+            <h3>Eligibility</h3>
+            <p>For landholding farmer families subject to certain exclusions.</p>
+        </div>
+        <div class="card">
+            <h3>Direct Benefit Transfer</h3>
+            <p>100% transparency with direct bank transfers.</p>
+        </div>
+    </section>
+
+    <!-- Floating Chat Button -->
+    <button id="chat-toggle-btn" class="chat-toggle-btn">💬 Chat with SarkariSaathi</button>
+
+    <!-- The Chat Window -->
+    <div id="chat-window" class="chat-window hidden">
+        <div class="chat-header">
+            <h4>SarkariSaathi AI</h4>
+            <button id="close-chat-btn" class="close-btn">&times;</button>
+        </div>
+        <div id="chat-messages" class="chat-messages">
+            <div class="message bot-message">
+                Hello! I am SarkariSaathi. Ask me any question about the PM-Kisan scheme!
+            </div>
+        </div>
+        <div class="chat-input-area">
+            <input type="text" id="user-input" placeholder="Type your question here..." />
+            <button id="send-btn">Send</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

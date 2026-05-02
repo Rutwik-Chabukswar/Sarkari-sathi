@@ -1,0 +1,7 @@
+fastapi==0.110.0
+PyPDF2==3.0.1
+google-generativeai
+python-dotenv==1.0.1
+streamlit==1.32.2
+chromadb
+uvicorn
