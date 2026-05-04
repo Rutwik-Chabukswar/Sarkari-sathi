@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Outfit:wght@400;500;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ---------- Base layer overrides ---------- */
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    font-family: 'Inter', sans-serif;
+    @apply bg-slate-50 text-slate-800 overflow-x-hidden;
+  }
+
+  ::-webkit-scrollbar {
+    width: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  ::-webkit-scrollbar-thumb {
+    @apply bg-slate-300 rounded-full;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-slate-400;
+  }
+}
+
+/* ---------- Component layer ---------- */
+@layer components {
+  .text-gradient {
+    @apply bg-clip-text text-transparent;
+    background-image: linear-gradient(135deg, #F97316, #6366F1);
+    background-size: 200% 200%;
+    animation: gradientShift 4s ease-in-out infinite;
+  }
+
+  .glass {
+    @apply bg-white/70 backdrop-blur-xl border border-white/20;
+  }
+  .glass-strong {
+    @apply bg-white/90 backdrop-blur-xl border border-slate-200;
+  }
+
+  .btn-primary {
+    @apply inline-flex items-center gap-2 px-8 py-4 rounded-full
+           font-semibold text-white
+           bg-gradient-to-br from-primary-500 to-primary-600
+           shadow-lg transition-all duration-200;
+    box-shadow: 0 10px 25px -5px rgba(249,115,22,0.3);
+  }
+  .btn-primary:hover {
+    @apply -translate-y-0.5;
+    box-shadow: 0 20px 40px -8px rgba(249,115,22,0.4);
+    filter: brightness(1.06);
+  }
+  .btn-primary:active {
+    @apply translate-y-0;
+  }
+
+  .btn-ghost {
+    @apply inline-flex items-center gap-2 px-8 py-4 rounded-full
+           font-semibold text-slate-700
+           bg-white/70 backdrop-blur-md
+           border border-slate-200
+           shadow-sm transition-all duration-200;
+  }
+  .btn-ghost:hover {
+    @apply -translate-y-0.5 bg-white/90 border-slate-300 shadow-md;
+  }
+}

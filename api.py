@@ -2,6 +2,7 @@ import os
 import sys
 from fastapi import FastAPI
 from fastapi.staticfiles import StaticFiles
+from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
 
 # Add 'src' directory to the path so we can import your untouched backend files
@@ -13,6 +14,15 @@ from qa_engine import answer_question
 
 # Initialize the FastAPI server
 app = FastAPI(title="SarkariSaathi API")
+
+# Allow the React dev server to talk to the backend during development
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["http://localhost:5173", "http://127.0.0.1:5173"],
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 
 # Load the PDF and chunks ONCE when the server starts (acts like our old cache)
 print("Loading PDF and preparing chunks for the server...")

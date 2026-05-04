@@ -11,3 +11,7 @@ __pycache__/
 
 # MacOS hidden files
 .DS_Store
+
+# Node.js / React Frontend
+node_modules/
+frontend/dist/
